@@ -1,28 +1,23 @@
 package org.acme.app.service;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.core.Response;
 import org.acme.app.dto.MovieDTO;
 import org.acme.domain.Movie;
-import org.acme.domain.MovieRepository;
 import org.acme.domain.exception.MovieAlreadyCreatedException;
 import org.acme.domain.exception.MovieNotFoundException;
 import org.acme.domain.usecase.CreateMovieUseCase;
 import org.acme.domain.usecase.GetMovieUseCase;
-import org.acme.infra.PanacheMovieRepository;
 
 @ApplicationScoped
 public class MovieService {
 
-    private CreateMovieUseCase createMovieUseCase;
+    @Inject
+    CreateMovieUseCase createMovieUseCase;
     
-    private GetMovieUseCase getMovieUseCase;
-
-    public MovieService() {
-        MovieRepository movieRepository = new PanacheMovieRepository();
-        this.createMovieUseCase = new CreateMovieUseCase(movieRepository);
-        this.getMovieUseCase = new GetMovieUseCase(movieRepository);
-    }
+    @Inject
+    GetMovieUseCase getMovieUseCase;
     
     @Transactional
     public Response createMovie(MovieDTO movieDTO) {

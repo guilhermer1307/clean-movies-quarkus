@@ -1,15 +1,15 @@
 package org.acme.domain.usecase;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import org.acme.domain.Movie;
 import org.acme.domain.MovieRepository;
 import org.acme.domain.exception.MovieNotFoundException;
 
+@ApplicationScoped
 public class GetMovieUseCase {
 
-    private MovieRepository movieRepository;
-
-    public GetMovieUseCase(MovieRepository movieRepository) {
-        this.movieRepository = movieRepository;
-    }
+    @Inject
+    MovieRepository movieRepository;
 
     public Movie getById(Long id) throws MovieNotFoundException {
         Movie movie = movieRepository.getMovieById(id);

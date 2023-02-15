@@ -1,11 +1,11 @@
 package org.acme.infra;
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import org.acme.app.dto.MovieDTO;
 import org.acme.domain.Movie;
 import org.acme.domain.MovieRepository;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
-@ApplicationScoped
+@RequestScoped
 public class PanacheMovieRepository implements MovieRepository, PanacheRepository<PanacheMovie> {
     
     @Override 
