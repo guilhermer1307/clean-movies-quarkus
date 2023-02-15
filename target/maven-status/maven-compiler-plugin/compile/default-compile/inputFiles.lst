@@ -1,1 +1,11 @@
-C:\Dev\projects\code-with-quarkus\src\main\java\org\acme\GreetingResource.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\app\rest\MovieResource.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\app\service\MovieService.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\exception\MovieNotFoundException.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\usecase\CreateMovieUseCase.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\exception\MovieAlreadyCreatedException.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\infra\PanacheMovieRepository.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\app\dto\MovieDTO.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\Movie.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\MovieRepository.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\domain\usecase\GetMovieUseCase.java
+C:\Dev\projects\clean-movies-quarkus\src\main\java\org\acme\infra\PanacheMovie.java
