@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.acme.domain.Movie;
+import org.acme.domain.entity.Movie;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
